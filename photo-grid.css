@@ -1,0 +1,20 @@
+.photo-grid {
+    display: grid;
+    gap: 1rem;
+     
+    /* Las filas(rows) estan muy pequeñas, y esto es porque su tamaño esta siendo automaticamente setteado
+    por el texto en el hijo */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    /* esta propiedad automaticamente fila tendra de fijo 240px de altura */
+    grid-auto-rows: 240px;
+}
+
+@media screen and (min-width: 600px) {
+    .card-tall {
+      grid-row: span 2 / auto;
+    }
+  
+    .card-wide {
+      grid-column: span 2 / auto;
+    }
+  }
