@@ -1,0 +1,27 @@
+.basic-grid {
+    /* primer paso */
+    display: grid;
+
+    /* rem viene de Root EM, es igual al font-size del elemento root
+    que en HTML, seria <html></html>. Si el font-size del html es 16px, 1rem seria igual a 16px
+    en cualquier parte del documento. */
+
+    gap: 1rem;
+    /* 1fr se refiere a 1 fractional unit parte del espacio disponible asi que 1 fr en este caso
+    seria 100% del espacio disponible. Si se sigue añadiendo columnas el espacio disponible
+    se divide en 100% - 50% - 33% - 25% */
+
+    /*1.- si se define de esta manera no es responsivo y es mucho codigo */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+
+    /* 2.- mas limpio, menos codigo */
+    /* grid-template-columns: repeat(12, 1fr); */
+
+    /* 3.- mejores dimensiones pero overflow en el y axis */
+    /* esto quiere decir que mis columnas no iran mas alla de 240px pero tampoco mas alla
+    de 1 fractional unit */
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+
+    /*4.- grid implicita - dejar que el algoritmo calcule las columnas y filas */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
