@@ -1,0 +1,23 @@
+.card-purple {
+  background-color: blueviolet;
+  color: white;
+}
+
+.card-grey {
+  background-color: gray;
+  color: white;
+}
+
+.card-black {
+  background-color: black;
+  color: white;
+}
+
+.card-blue {
+  background-color: aquamarine;
+}
+
+.card-red {
+  background-color: brown;
+  color: white;
+}

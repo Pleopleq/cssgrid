@@ -1,0 +1,47 @@
+.cards {
+    display: grid;
+    gap: 1rem;
+    font-family: sans-serif;
+    font-weight: 600;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 240px 240px;
+
+    grid-template-areas: 
+    'card-purple card-purple card-blue card-red'
+    'card-grey card-black card-black  card-red';
+}
+
+
+.card-purple {
+    grid-area: card-purple;
+}
+
+.card-blue {
+    grid-area: card-blue;
+}
+
+.card-grey {
+    grid-area: card-grey;
+}
+
+.card-black {
+    grid-area: card-black;
+}
+
+.card-red {
+    grid-area: card-red;
+}
+
+@media screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 240px);
+        grid-template-areas:
+                'card-purple card-purple'
+                'card-blue card-red'
+                'card-black card-black'
+                'card-grey card-grey';
+    }
+}
+
